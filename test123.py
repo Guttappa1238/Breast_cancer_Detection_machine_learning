@@ -3,6 +3,8 @@
 Created on Sun Nov 11 12:51:45 2018
 
 @author: Guttappa sajjan
+
+python3 test123.py
 """
 
 import pandas as pd
@@ -89,7 +91,7 @@ plt.scatter(prediction,y_test)
 plt.show()
 
 
-######naive bayes classifier
+######naive bayes classifier 
 
 from sklearn.naive_bayes import GaussianNB
 
@@ -101,7 +103,7 @@ prediction = clf.predict(X_test)
 scores = cross_val_score(clf, X, y, cv=5)
 
 end = time.time()
-
+##appending accuracies
 accuracy_all.append(accuracy_score(prediction, y_test))
 cvs_all.append(np.mean(scores))
 
@@ -124,7 +126,7 @@ predictions = model.predict(X_test)
 scores = cross_val_score(clf, X, y, cv=5)
 
 end = time.time()
-
+##appending accuracies
 accuracy_all.append(accuracy_score(prediction, y_test))
 cvs_all.append(np.mean(scores))
 
